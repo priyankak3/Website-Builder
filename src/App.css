@@ -1,0 +1,33 @@
+
+
+:root {
+  --primary-color: #2563EB;
+  --secondary-color: #1E293B;
+  --text-color: #F8FAFC;
+  --background-color: #0F172A;
+  --alt-background-color: #1a2744;
+  --accent-color: #F59E0B;
+  --border-radius: 8px;
+  --padding-x: 2rem;
+  --padding-y: 2rem;
+  --transition: all 0.3s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+#root{
+    width: 100vw;
+  }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-width: 100vw; /* Ensures the body takes up the full viewport width */
+    margin: 0; /* Remove any default margin */
+  }
+  

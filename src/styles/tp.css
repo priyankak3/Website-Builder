@@ -1,0 +1,314 @@
+
+/* Property Panel */
+.property-panel {
+    margin-top: 10px;
+    width: 23%;
+    border-left: 1px solid #ddd;
+    padding: 8px;
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Arial";
+  }
+  
+  
+  .property-panel h2 {
+    font-size: 1rem;
+    color: #457b9d;
+  }
+  .property-panel p{
+    font-size: 14px;
+  }
+  
+  .property-panel label {
+    /* display: block; */
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .property-panel input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .property-panel input[type="text"]:focus {
+    border-color: #457b9d;
+    outline: none;
+  }
+  
+  .property-panel button {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .property-panel button:hover {
+    background: #457b9d;
+  }
+  label{
+    color: black;
+  }
+  .color-picker {
+    display: flex;
+    gap: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: black;
+  }
+  
+  .color-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .color-preview input[type="color"] {
+    appearance: none;
+    width: 80px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .color-preview input[type="color"]:hover {
+    transform: scale(1.1);
+  }
+
+  /* Button and Textbox Styling */
+.property-panel button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, #1d3557 0%, #457b9d 100%);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .property-panel button:hover {
+    background: #1d3557;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #457b9d;
+    outline: none;
+  }
+  
+  /* Container Component Styling */
+  .container-component {
+    background: white;
+    border: 2px solid #457b9d;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      min-width: 100px;
+      min-height: 50px;
+  }
+  
+  label {
+    word-break: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    height: auto;
+    line-height: 1.2;
+  }
+  
+  .property-panel .remove-button {
+    width: 100%;
+    padding: 10px;
+    background: #e63946;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .property-panel .remove-button:hover {
+    background: #d62828;
+  }
+  
+  .checkbox-component {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .checkbox-component input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .checkbox-component span {
+    font-size: 14px;
+    color: #2c3e50;
+  }
+  .radio-button-component {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .radio-button-component input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .radio-button-component span {
+    font-size: 14px;
+    color: #2c3e50;
+  }
+  .dropdown-component {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .dropdown-component label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .dropdown-component select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-component select:focus {
+    border-color: #457b9d;
+    outline: none;
+  }
+  
+  /* Toggle */
+  .toggle-switch {
+    position: relative;
+    width: 10%;
+    height: 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #6c7ae0, #667eea);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  .toggle-switch button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* The slider inside the button */
+  .toggle-switch .slider {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s ease, background-color 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Text inside the slider */
+  .toggle-switch .text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    transition: color 0.3s ease;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    opacity: 0;  /* Initially hide the text */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Active state of the slider (when toggle is on "Integration") */
+  .toggle-switch button.active .slider {
+    left: 50%; /* Slide to the right when active */
+    background-color: #4facb8; /* Active background color */
+  }
+  
+  /* Show the text only on the active side */
+  .toggle-switch button.active .left-text {
+    opacity: 0;
+    
+  }
+  
+  .toggle-switch button.active .right-text {
+    opacity: 1;
+  }
+  
+  /* Initial state for the left side (Design) */
+  .toggle-switch button .left-text {
+    opacity: 1;
+    color: #000000; 
+    position: relative;
+    opacity: 1;
+    /* color: #fff; */
+    left: 20px;
+  }
+  
+  .toggle-switch button .right-text {
+    opacity: 0;
+    color: #fff; 
+      left: -20px;
+      position: relative;
+  }
+  
+  /* Hover effect for the button */
+  .toggle-switch button:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle hover shadow */
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Adding a border and more contrast to the active state */
+  .toggle-switch button.active {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  

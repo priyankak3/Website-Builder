@@ -1,0 +1,97 @@
+
+
+.publish-button {
+    background-color: #4caf50; 
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .publish-button:hover {
+    background-color: #45a049; 
+  }
+  
+  .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    display: flex
+    ;
+        justify-content: space-between;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem; 
+  }
+  
+  .modal-body {
+    padding: 20px; 
+  }
+  
+  .alert {
+    margin-bottom: 20px;
+  }
+  
+  .download-btn {
+    background-color: transparent; 
+    border: 1px solid #007bff; 
+    color: #007bff; 
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .download-btn:hover {
+    background-color: #007bff; 
+    color: white; 
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-muted {
+    color: #6c757d; 
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545; 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+  }
+  
+  .cancel-button:hover {
+    background-color: #c82333; 
+  }
+  
+  .submit-button {
+    background-color: rgb(76, 175, 80); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px;     
+    border-radius: 4px; 
+    cursor: pointer; 
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;  
+  }
+  .modal-footer{
+    gap: 5px;
+    display: flex
+;
+  }

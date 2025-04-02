@@ -1,0 +1,190 @@
+/* Container for the entire properties panel */
+.properties-panel {
+    width: 100%;
+    max-width: 400px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+  }
+  
+  /* Header section with title and delete button */
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .panel-header h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Tabs for content, style, and advanced sections */
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 16px;
+  }
+  
+  .tabs button {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    flex-grow: 1;
+  }
+  
+  .tabs button.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
+  }
+  
+  .tabs button:hover {
+    background-color: #bdc3c7;
+  }
+  
+  /* Content of the tab, form sections */
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Form groups (inputs, labels) */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    color: black;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #2c3e50;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    width: 100%;
+    color: black;
+  }
+  
+  .form-group input[type="color"] {
+    padding: 0;
+    height: 40px;
+    width: 100%;
+  }
+  
+  .form-group input[type="number"] {
+    width: auto;
+    max-width: 80px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .form-group .input-with-unit {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-group .input-with-unit input {
+    width: 60px;
+  }
+  
+  .form-group .input-with-unit span {
+    margin-left: 8px;
+  }
+  
+  .form-group select {
+    width: auto;
+    max-width: 150px;
+  }
+  
+  /* Four input values layout (for margin and padding) */
+  .four-values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  
+  .four-values .input-with-label {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .four-values .input-with-label input {
+    width: 60px;
+  }
+  
+  .four-values .input-with-label span {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 4px;
+  }
+  
+  /* Styling for active state and hover effects */
+  input[type="number"]:focus,
+  input[type="text"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  input[type="color"]:focus {
+    border-color: #3498db;
+  }
+  
+  input[type="color"] {
+    cursor: pointer;
+  }
+  
+  /* Spacing and layout adjustments for responsiveness */
+  @media (max-width: 600px) {
+    .properties-panel {
+      max-width: 100%;
+      padding: 12px;
+    }
+  
+    .tabs {
+      flex-direction: column;
+    }
+  
+    .tabs button {
+      margin-bottom: 8px;
+    }
+  
+    .four-values {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  

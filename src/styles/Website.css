@@ -1,0 +1,565 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+  :root {
+    --primary-color: #2563EB;
+    --secondary-color: #1E293B;
+    --text-color: #F8FAFC;
+    --background-color: #0F172A;
+    --alt-background-color: #1a2744;
+    --accent-color: #F59E0B;
+    --border-radius: 8px;
+    --padding-x: 2rem;
+    --padding-y: 2rem;
+    --transition: all 0.3s ease;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+#root{
+    width: 100vw;
+  }
+
+
+  
+  button {
+    cursor: pointer;
+  }
+  
+  /* Header Styles */
+  .builder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .builder-header h1 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .builder-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .builder-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .preview-button {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .save-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .publish-button {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  /* Main Builder Layout */
+  .builder-main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 4rem);
+    overflow: hidden;
+    background-color: white;
+    color: black;
+  }
+  
+  .editor-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  /* Template Panel */
+  .template-panel .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  
+  .toggle-btn {
+    font-size: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    margin-right: 15px;
+    border: 1px solid blue;
+  }
+
+  .selected {
+    background-color: lightblue; /
+  }
+  
+  
+  .template-panel h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .template-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-top: 10px;
+  }
+  
+  .template-item {
+    flex: 0 0 auto;
+    width: 150px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 10px;
+  }
+  
+  .template-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .template-item.selected {
+    border-color: #2196F3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.3);
+  }
+  
+  .template-preview {
+    height: 100px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .template-layout-preview {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .two-column-preview {
+    display: flex;
+    height: 100%;
+  }
+  
+  .two-column-preview .column {
+    flex: 1;
+    margin: 0 2px;
+    background-color: #e0e0e0;
+  }
+  
+  .grid-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+    height: 100%;
+  }
+  
+  .grid-preview .grid-item {
+    background-color: #e0e0e0;
+  }
+  
+  .single-column-preview {
+    height: 100%;
+    padding: 0 20%;
+  }
+  
+  .single-column-preview .column {
+    height: 100%;
+    background-color: #e0e0e0;
+  }
+  
+  .template-name {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* Elements Panel */
+  .elements-panel {
+    width: 220px; /* Default width for larger screens */
+    padding: 1rem;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto;
+    transition: width 0.3s, opacity 0.3s; /* Smooth transition for width and opacity changes */
+  }
+  
+  .elements-panel.closed {
+    width: 50px; /* Width when closed */
+    opacity: 0.5; /* Slightly transparent when closed */
+  }
+  
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Other existing styles remain unchanged */
+  .elements-panel h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .elements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .elements-panel .close-button{
+    position: static;
+  }
+  
+  .element-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .element-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .element-item.dragging {
+    opacity: 0.5;
+  }
+  
+  .element-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .elements-panel {
+      width: 100%; 
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0; 
+    }
+  
+    .elements-panel.closed {
+      width: 50px; 
+    }
+  
+    .elements-panel h3 {
+      font-size: 1.25rem; 
+    }
+  
+    .element-item {
+      padding: 0.5rem; 
+    }
+  }
+/* Studio Container */
+.studio-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.studio-header {
+  background-color: var(--background-color);
+  color: white;
+  padding: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.studio-header .h1 {
+  margin: 0;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+/* Version Control Section */
+.version-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  background: background-color; /* Ensure you have a proper background color */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.version-control .app-id,
+.version-control .version {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  font-size: 0.9rem;
+}
+.version-control .version{
+  width: 200px;
+}
+.version-control .increment-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.version-control button {
+  color: white;
+  background-color: #1d3557;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.version-control button:hover {
+  background: white; /* Add a solid color or gradient */
+  color: #1d3557;;
+}
+
+/* Publish Button */
+.version-control .publish-button {
+  background: #4caf50;
+  color: white;
+  width: 30%;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.publish-button:hover {
+  background: #333;
+}
+
+/* User Profile Section */
+.user-profile {
+  display: flex;
+  align-items: center;
+  /* gap: 0.5rem; */
+}
+
+.user-profile .profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-profile .dropdown {
+  position: relative;
+}
+
+.user-profile .dropdown-button {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size:0.8rem;
+}
+
+.user-profile .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content p,
+.dropdown-content button {
+  padding: 5px;
+  margin: 0;
+  color: white;
+  text-align: center;
+  border: none;
+  background: none;
+}
+
+.dropdown-content button {
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background-color: #444;
+}
+
+/* Main Layout */
+.studio-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Side Panel */
+.side-panel {
+  margin-top: 10px;
+  width: 20%;
+  background: white;
+  border-right: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel .tabs {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+}
+.rnd-container, 
+.rnd-container * {
+  box-sizing: border-box;
+}
+.side-panel .tabs button {
+  flex: 1;
+  padding: 10px;
+  /* background-color: #f1f5f8; */
+  background-color: #f5f5f5;
+  color: #1d3557;
+  /* color:#ddd; */
+  border: 1px solid #ddd;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  /* transition: all 0.3s ease; */
+  text-transform: uppercase;
+  font-family:"Arial"
+}
+
+.side-panel .tabs button:hover,
+.side-panel .tabs button.active-tab {
+  background: #1d3557;
+  color: white;
+}
+
+/* Tab Content */
+.side-panel> .tab-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+/* Canvas Section */
+.canvas {
+  flex: 1;
+  background: #f0f4f8;
+  border: 2px dashed #457b9d;
+  margin: 10px;
+  border-radius: 8px;
+  padding: 5px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas h2 {
+  color: #1d3557;
+  font-size: 1rem;
+  text-align: center;
+}
+.canvas div.react-draggable {
+  height: auto !important; 
+   width: auto !important;
+  border:none  !important;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh; 
+  overflow-y: auto; 
+  padding: 20px; 
+}
+
+.close-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-button:hover {
+  color: #ff0000;
+}
+
+
+.nav-services{
+  display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center
+}
