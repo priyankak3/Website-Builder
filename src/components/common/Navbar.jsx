@@ -13,7 +13,7 @@ const Navbar = ({ elements, websiteData, selectedTemplate }) => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">Website Builder</Link>
+        <Link to="/">WebForage</Link>
       </div>
       <div className={`navbar-links ${isMobileMenuOpen ? "open" : ""}`}>
         <Link to="/" onClick={() => setMobileMenuOpen(false)}>

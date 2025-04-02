@@ -762,7 +762,6 @@ function WebsiteBuilder() {
       );
     }
   }, [websiteData]);
-  console.log(showTemplateForm);
   // Render the main builder interface
   return (
     <DndProvider backend={HTML5Backend}>

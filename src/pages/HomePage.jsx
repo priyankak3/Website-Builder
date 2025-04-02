@@ -4,6 +4,7 @@ import Hero from "../components/home/Hero";
 import Services from "../components/home/Services";
 import Welcome from "../components/home/Welcome";
 import "../styles/HomePage.css";
+import Footer from "../components/common/Footer";
 const HomePage = () => {
   return (
     <div className="homepage">
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Hero />
       <Services />
       <Welcome />
+      <Footer />
     </div>
   );
 };

@@ -6,16 +6,12 @@ const Welcome = () => {
     <section className="welcome">
       <div className="welcome-content">
         <div className="welcome-images">
-          <div className="image-person">
-            <img src="/assets/images/person-writing.jpg" alt="Person writing" />
-          </div>
-          <div className="image-neon">
+         
             <img
-              src="/assets/images/neon-sign.jpg"
-              alt="Do something great neon sign"
+              src="https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGJ1aWxkZXJ8ZW58MHx8MHx8fDA%3D"
+              alt="Person writing"
             />
-            <div className="edit-button">Edit</div>
-          </div>
+          
         </div>
         <div className="welcome-text">
           <h2>Welcome to Website Builder: Crafting Digital Dreams</h2>
@@ -28,17 +24,7 @@ const Welcome = () => {
           </Link>
         </div>
       </div>
-      <div className="client-logos">
-        {/* 9 logo placeholders */}
-        {[...Array(9)].map((_, index) => (
-          <div key={index} className="logo-box">
-            <img
-              src={`/assets/images/logos/logoipsum-${index + 1}.svg`}
-              alt={`Client logo ${index + 1}`}
-            />
-          </div>
-        ))}
-      </div>
+      
     </section>
   );
 };
